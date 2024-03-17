@@ -1,11 +1,10 @@
 from app import app
 from models import db, Bird
 
-# Initialize SQLAlchemy with the app context
 
 
-# Use a context manager to handle the session and transactions
 with app.app_context():
+
     print('Deleting existing birds...')
     Bird.query.delete()
 
